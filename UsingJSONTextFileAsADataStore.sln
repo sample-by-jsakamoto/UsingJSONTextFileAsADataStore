@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25029.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingJSONTextFileAsADataStore", "UsingJSONTextFileAsADataStore.csproj", "{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEA58F1-B27C-4C93-8AC1-C2B66DCA915D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
