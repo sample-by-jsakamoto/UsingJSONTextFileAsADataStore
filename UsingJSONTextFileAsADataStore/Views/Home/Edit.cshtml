@@ -1,0 +1,22 @@
+﻿@model UsingJSONTextFileAsADataStore.Models.Person
+
+<div class="row section">
+    <form class="col s12" method="post" action="/Home/Edit">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                @Html.TextBoxFor(m => m.Name)
+                <label for="Name">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+                @Html.TextBoxFor(m => m.Age)
+                <label for="Age">Age</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 right-align">
+                <input type="submit" value="update" class="btn">
+                <a href="/" class="btn">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>

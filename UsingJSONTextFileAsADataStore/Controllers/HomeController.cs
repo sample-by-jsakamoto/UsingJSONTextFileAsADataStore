@@ -47,5 +47,16 @@ namespace UsingJSONTextFileAsADataStore.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var store = Global.PeopleStore;
+            lock (store)
+            {
+                var personToEdit = store.People.First(person => person.Id == id);
+                return View(personToEdit);
+            }
+        }
     }
 }

@@ -37,6 +37,7 @@
                     <td>@person.Name</td>
                     <td>@person.Age</td>
                     <td>
+                        <a class="btn edit-person" href="@Url.Action("Edit", new { person.Id })">Edit</a>
                         <a class="btn delete-person" data-id="@person.Id">Delete</a>
                     </td>
                 </tr>
