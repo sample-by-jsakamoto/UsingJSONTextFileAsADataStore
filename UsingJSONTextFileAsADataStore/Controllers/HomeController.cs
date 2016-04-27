@@ -58,5 +58,23 @@ namespace UsingJSONTextFileAsADataStore.Controllers
                 return View(personToEdit);
             }
         }
+
+        [HttpPost]
+        public ActionResult Edit(int id, string name, int age)
+        {
+            var store = Global.PeopleStore;
+            lock (store)
+            {
+                var personToEdit = store.People.First(person => person.Id == id);
+                if (ModelState.IsValid == false)
+                    return View(personToEdit);
+
+                personToEdit.Name = name;
+                personToEdit.Age = age;
+                store.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
