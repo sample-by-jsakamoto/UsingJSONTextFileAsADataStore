@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Using JSON Text File As A Data Store</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/Content/materialize.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="grey darken-3" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <span id="logo-container" class="brand-logo">
+                    <a href="/">
+                        Using JSON Text File As A Data Store
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="page-footer grey">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-2">CSS styling by <a class="white-text" href="http://materializecss.com/" target="_blank">Materialize</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/materialize.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

@@ -126,6 +126,8 @@
     <Content Include="Content\fonts\roboto\Roboto-Regular.ttf" />
     <Content Include="Content\fonts\roboto\Roboto-Thin.ttf" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

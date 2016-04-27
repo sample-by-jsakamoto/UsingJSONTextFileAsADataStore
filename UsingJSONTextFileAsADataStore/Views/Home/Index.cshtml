@@ -1,91 +1,53 @@
 ﻿@model UsingJSONTextFileAsADataStore.Models.Person[]
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Using JSON Text File As A Data Store</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/Content/materialize.min.css" rel="stylesheet" />
-</head>
-<body>
-    <nav class="grey darken-3" role="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <span id="logo-container" class="brand-logo">
-                    <a href="/">
-                        Using JSON Text File As A Data Store
-                    </a>
-                </span>
+
+<div class="row section">
+    <form class="col s12" method="post" action="/Home/Add">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="age" name="age" type="text" class="validate">
+                <label for="age">Age</label>
             </div>
         </div>
-    </nav>
-
-    <div class="container">
-
-        <div class="row section">
-            <form class="col s12" method="post" action="/Home/Add">
-                <div class="row">
-                    <div class="input-field col s12 m6">
-                        <input id="name" name="name" type="text" class="validate">
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="input-field col s12 m6">
-                        <input id="age" name="age" type="text" class="validate">
-                        <label for="age">Age</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 right-align">
-                        <input type="submit" value="add" class="btn">
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="row section">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @foreach (var person in Model)
-                    {
-                        <tr>
-                            <td>@person.Name</td>
-                            <td>@person.Age</td>
-                            <td>
-                                <a class="btn delete-person" data-id="@person.Id">Delete</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-            <form id="delete-form" method="post" action="/Home/Delete">
-                <input id="person-id-for-delete" name="id" type="hidden" value="" />
-            </form>
-        </div>
-    </div>
-
-    <footer class="page-footer grey">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <p class="grey-text text-lighten-2">CSS styling by <a class="white-text" href="http://materializecss.com/" target="_blank">Materialize</a>.</p>
-                </div>
+        <div class="row">
+            <div class="input-field col s12 right-align">
+                <input type="submit" value="add" class="btn">
             </div>
         </div>
-    </footer>
+    </form>
+</div>
 
-    <script src="/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="/Scripts/materialize.min.js"></script>
+<div class="row section">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Age</td>
+                    <td>
+                        <a class="btn delete-person" data-id="@person.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <form id="delete-form" method="post" action="/Home/Delete">
+        <input id="person-id-for-delete" name="id" type="hidden" value="" />
+    </form>
+</div>
+
+@section scripts{
     <script src="/Scripts/Index.js"></script>
-</body>
-</html>
+}
