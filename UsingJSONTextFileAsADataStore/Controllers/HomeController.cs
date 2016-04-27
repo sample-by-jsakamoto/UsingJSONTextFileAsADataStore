@@ -34,5 +34,18 @@ namespace UsingJSONTextFileAsADataStore.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var store = Global.PeopleStore;
+            lock (store)
+            {
+                store.Delete(id);
+                store.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }
