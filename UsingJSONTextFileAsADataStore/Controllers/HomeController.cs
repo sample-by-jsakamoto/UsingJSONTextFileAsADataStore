@@ -11,7 +11,11 @@ namespace UsingJSONTextFileAsADataStore.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var store = Global.PeopleStore;
+            lock (store)
+            {
+                return View("Index", store.People.ToArray());
+            }
         }
 
         [HttpPost]
@@ -28,7 +32,7 @@ namespace UsingJSONTextFileAsADataStore.Controllers
                 store.SaveChanges();
             }
 
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }
