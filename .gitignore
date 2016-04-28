@@ -5,3 +5,4 @@ packages/
 *.user
 *.suo
 /UsingJSONTextFileAsADataStore/App_Data/people.json
+Publish/
